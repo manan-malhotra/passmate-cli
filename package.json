@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "macos-touchid": "^1.0.3"
+    "axios": "^1.7.2",
+    "axios-cookiejar-support": "^5.0.2",
+    "macos-touchid": "^1.0.3",
+    "readline-sync": "^1.4.10",
+    "tough-cookie": "^4.1.4"
   }
 }

@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-const fs = require("fs");
-const path = require("path");
 const touchid = require("macos-touchid");
 
-const TOKEN_FILE = path.join(__dirname, ".passmatetoken.txt");
-
+const { login } = require("./helpers/login");
 console.log("Welcome to the CLI Login Tool!");
 const args = process.argv.slice(2);
 console.log(process.argv);
@@ -21,7 +18,7 @@ switch (command) {
     // register();
     break;
   case "login":
-    // login();
+    const token = login();
     break;
   case "logout":
     // logout();
