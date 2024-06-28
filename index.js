@@ -2,9 +2,11 @@
 const touchid = require("macos-touchid");
 
 const { login } = require("./helpers/login");
+const { register } = require("./helpers/register");
+const { logout } = require("./helpers/logout");
+const { whoami } = require("./helpers/whoami");
 console.log("Welcome to the CLI Login Tool!");
 const args = process.argv.slice(2);
-console.log(process.argv);
 if (args.length === 0) {
   console.log(
     "Please provide a command: register, login, logout, whoami, addpass, viewpass"
@@ -15,16 +17,16 @@ if (args.length === 0) {
 const command = args[0];
 switch (command) {
   case "register":
-    // register();
+    register();
     break;
   case "login":
     const token = login();
     break;
   case "logout":
-    // logout();
+    logout();
     break;
   case "whoami":
-    // whoami();
+    whoami();
     break;
   case "addpass":
     // addpass();
