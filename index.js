@@ -5,6 +5,8 @@ const { login } = require("./helpers/login");
 const { register } = require("./helpers/register");
 const { logout } = require("./helpers/logout");
 const { whoami } = require("./helpers/whoami");
+const { addPass } = require("./helpers/addpass");
+const { viewPass } = require("./helpers/viewpass");
 console.log("Welcome to the CLI Login Tool!");
 const args = process.argv.slice(2);
 if (args.length === 0) {
@@ -19,7 +21,7 @@ switch (command) {
     register();
     break;
   case "login":
-    const token = login();
+    login();
     break;
   case "logout":
     logout();
@@ -28,10 +30,10 @@ switch (command) {
     whoami();
     break;
   case "addpass":
-    // addpass();
+    addPass();
     break;
   case "viewpass":
-    // viewpass()
+    viewPass();
     break;
   case "-help":
   case "help":
