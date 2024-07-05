@@ -7,7 +7,7 @@ const { logout } = require("./helpers/logout");
 const { whoami } = require("./helpers/whoami");
 const { addPass } = require("./helpers/addpass");
 const { viewPass } = require("./helpers/viewpass");
-console.log("Welcome to the CLI Login Tool!");
+console.log("Welcome to passmate-cli!");
 const args = process.argv.slice(2);
 if (args.length === 0) {
   console.log("Please provide a valid command");

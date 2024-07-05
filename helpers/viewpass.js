@@ -16,7 +16,7 @@ function isMacOS() {
   return os.platform() === "darwin";
 }
 async function viewPass() {
-  const url = "http://localhost:3000/api/store/getPass";
+  const url = "https://passmate-alpha.vercel.app/api/store/getPass";
   const tokenName = "token";
   const tokenValue = loadToken();
   if (!tokenValue) {
@@ -30,7 +30,7 @@ async function viewPass() {
   await addTokenToCookies(url, tokenName, tokenValue);
   try {
     const response = await client.post(
-      "http://localhost:3000/api/store/getPass",
+      "https://passmate-alpha.vercel.app/api/store/getPass",
       {
         key,
       }

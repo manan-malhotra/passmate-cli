@@ -8,7 +8,7 @@ async function register() {
   });
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/user/register",
+      "https://passmate-alpha.vercel.app/api/user/register",
       {
         username,
         password,

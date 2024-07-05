@@ -11,7 +11,7 @@ const addTokenToCookies = async (url, tokenName, tokenValue) => {
   await cookieJar.setCookie(cookieString, url);
 };
 async function whoami() {
-  const url = "http://localhost:3000/api/user/getProfile";
+  const url = "https://passmate-alpha.vercel.app/api/user/getProfile";
   const tokenName = "token";
   const tokenValue = loadToken();
   if (!tokenValue) {

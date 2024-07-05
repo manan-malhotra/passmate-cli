@@ -10,7 +10,7 @@ const addTokenToCookies = async (url, tokenName, tokenValue) => {
   await cookieJar.setCookie(cookieString, url);
 };
 async function addPass() {
-  const url = "http://localhost:3000/api/store/addPass";
+  const url = "https://passmate-alpha.vercel.app/api/store/addPass";
   const tokenName = "token";
   const tokenValue = loadToken();
   if (!tokenValue) {
@@ -26,7 +26,7 @@ async function addPass() {
   await addTokenToCookies(url, tokenName, tokenValue);
   try {
     const response = await client.post(
-      "http://localhost:3000/api/store/addPass",
+      "https://passmate-alpha.vercel.app/api/store/addPass",
       {
         key,
         username,

@@ -15,10 +15,13 @@ async function login() {
     hideEchoBack: true,
   });
   try {
-    const response = await client.post("http://localhost:3000/api/user/login", {
-      username,
-      password,
-    });
+    const response = await client.post(
+      "https://passmate-alpha.vercel.app/api/user/login",
+      {
+        username,
+        password,
+      }
+    );
     // console.log(response.data);
     // The token is now stored in the cookie jar
     const cookies = cookieJar.toJSON().cookies;
